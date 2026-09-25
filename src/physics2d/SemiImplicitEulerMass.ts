@@ -48,7 +48,7 @@ export class SemiImplicitEulerMass implements PointMass {
     this.force.x = 0; this.force.y = 0;
   }
 
-  currentForce(pos: Vector2, vel?: Vector2): Vector2 {
+  currentForce(_pos: Vector2, vel?: Vector2): Vector2 {
     // Sum of external forces + quadratic drag
     const v = vel ? new Vector2(vel.x, vel.y) : new Vector2(this.velocity.x, this.velocity.y);
     const totalForce = new Vector2(this.force.x, this.force.y);

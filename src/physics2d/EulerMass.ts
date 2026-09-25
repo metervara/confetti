@@ -51,7 +51,7 @@ export class EulerMass implements PointMass {
 		this.force.x = 0; this.force.y = 0;
 	}
 
-	currentForce(pos: Vector2, vel?: Vector2): Vector2 {
+	currentForce(_pos: Vector2, vel?: Vector2): Vector2 {
 		// Use provided velocity if given (needed by RK4), else instance velocity
 		const v = vel ? new Vector2(vel.x, vel.y) : new Vector2(this.velocity.x, this.velocity.y);
 		const totalForce = new Vector2(this.force.x, this.force.y);
